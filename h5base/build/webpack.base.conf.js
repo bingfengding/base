@@ -4,14 +4,13 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 
-const vuxLoader = require('vux-loader')
-const webpackConfig  = {
+
+module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: ['./node_modules/babel-polyfill/dist/polyfill.js','./src/main.js']
@@ -24,15 +23,18 @@ const webpackConfig  = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json','.less'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'assets':"@/assets",
-      'image':"@/image",
+      'api': '@/api',
+      'assets':'@/asset',
+      'src':resolve('src'),
+      'utils':'@/utils',
       'view':"@/view",
-      'api':'@/api',
-      'utils':'@/utils'
+      'style':"@/style",
+      'store':"@/store"
+      
     }
   },
   module: {
@@ -86,5 +88,3 @@ const webpackConfig  = {
     child_process: 'empty'
   }
 }
-
-module.exports = vuxLoader.merge(webpackConfig, { plugins: ['vux-ui'] })

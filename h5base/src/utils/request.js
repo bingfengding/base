@@ -8,7 +8,7 @@ import qs from 'qs'
 
 // create an axios instance
 const service = axios.create({
-  //baseURL: "https://a.manbetxleague.com",
+  baseURL: process.env.BASE_API,
   timeout: 5000, // request timeout
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'

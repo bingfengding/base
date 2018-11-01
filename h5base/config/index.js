@@ -6,16 +6,16 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
+    env: require('./dev.env'),
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/api": {
-        target: "https://a.manbetxleague.com/api",
-        changeOrigin: true,
-        pathRewrite: {
-          "^/api": '/'
+      '/api':{
+        target:"http://10.5.35.135/api",
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':""
         }
       }
     },
