@@ -20,7 +20,7 @@
       //   clientWidth = 750;
       // }
       if (!clientWidth) return;
-      docEl.style.fontSize = clientWidth *100 / 1080 + "px";
+      docEl.style.fontSize = clientWidth *100 / 750 + "px";
     };
   if (!doc.addEventListener) return;
   win.addEventListener(resizeEvt, recalc, false);
