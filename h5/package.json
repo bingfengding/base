@@ -17,6 +17,7 @@
     "animate.css": "^3.7.0",
     "cross-env": "^5.2.0",
     "fastclick": "^1.0.6",
+    "jsencrypt": "^3.0.0-rc.1",
     "mint-ui": "^2.2.13",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios": "^0.18.0",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^21.0.2",

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import {JsEncrypt} from 'jsencrypt'
 export default {
   data () {
     return {
